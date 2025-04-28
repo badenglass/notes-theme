@@ -1,2 +1,2 @@
-This is footer.
-You can edit this in ../nostyleplease/layouts/footer.md
+Baden Glass
+it would be cool to add a fortune here...

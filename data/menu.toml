@@ -1,51 +1,35 @@
 [[entries]]
-title = "info"
-
-  [[entries.entries]]
-  title = "a (nearly) no-CSS, fast, minimalist Hugo theme ported from <a href='https://github.com/riggraz/no-style-please'>riggraz/no-style-please</a>."
-
-  [[entries.entries]]
-  title = "github repo"
-  url = "https://github.com/hanwenguo/hugo-theme-nostyleplease"
-
+title = "Daily"
+url = "daily"
 
 [[entries]]
-title = "all posts"
+title = "Box"
+url = "box"
+
+[[entries]]
+title = "Graph"
+url = "graph"
+
+[[entries]]
+title = "Other"
+url = "other"
+
+[[entries]]
+title = "Latest Daily Notes"
 
   [entries.post_list]
+  section = "daily"
   limit = 5
   show_more = true
-  show_more_text = "See archive..."
-  show_more_url = "posts"
+  show_more_text = "More daily notes..."
+  show_more_url = "daily"
 
 [[entries]]
-title = "posts by category"
+title = "Latest Box Notes"
 
   [entries.post_list]
-  section = "posts"
+  section = "box"
+  limit = 5
   show_more = true
-  show_more_text = "See more posts..."
-  show_more_url = "posts"
-
-[[entries]]
-title = "rss"
-url = "index.xml"
-
-[[entries]]
-title = "another list"
-
-  [[entries.entries]]
-  title = "with subitems"
-
-    [[entries.entries.entries]]
-    title = "with subsubitems"
-
-    [[entries.entries.entries]]
-    title = "example page"
-    url = "about"
-
-[[entries]]
-title = "PRO TIP"
-entries = [
-   { title = "to edit this menu, edit data/menu.toml file" }
-  ]
+  show_more_text = "More box notes..."
+  show_more_url = "box"
