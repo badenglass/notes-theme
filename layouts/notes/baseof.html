@@ -4,7 +4,7 @@
     <body a="{{ $.Site.Params.theme_config.appearance | default "auto" }}">
         <main class="page-content" aria-label="Content">
             <div class="w">
-                <div class="post-meta">
+                <div class="note-meta">
                     {{ partial "back_link.html" .}}
                     <p>
                         <time datetime="{{ .Date }}">
@@ -16,6 +16,8 @@
             </div>
         </main>
     </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+
     {{- if .Params.custom_js -}}
         {{- range .Params.custom_js -}}
             {{ $js := resources.Get (print "js/" . ".js") }}

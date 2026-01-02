@@ -1,35 +1,29 @@
 [[entries]]
-title = "Daily"
+title = "daily"
 url = "daily"
 
 [[entries]]
-title = "Box"
-url = "box"
+title = "sketches"
+url = "sketches"
 
 [[entries]]
-title = "Graph"
-url = "graph"
+title = "topics"
+url = "topics"
+
+  [[entries.entries]]
+  title = "neovim"
+  url = "neovim"
+
+  [[entries.entries]]
+  title = "sdl"
+  url = "sdl"
 
 [[entries]]
-title = "Other"
-url = "other"
+title = "this week"
 
-[[entries]]
-title = "Latest Daily Notes"
-
-  [entries.post_list]
+  [entries.notes_list]
   section = "daily"
   limit = 5
   show_more = true
   show_more_text = "More daily notes..."
   show_more_url = "daily"
-
-[[entries]]
-title = "Latest Box Notes"
-
-  [entries.post_list]
-  section = "box"
-  limit = 5
-  show_more = true
-  show_more_text = "More box notes..."
-  show_more_url = "box"
