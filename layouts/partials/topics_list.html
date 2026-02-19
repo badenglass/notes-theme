@@ -1,0 +1,7 @@
+<ul>
+  {{- range $taxonomy := .context.Site.Taxonomies.topics -}}
+  <li>
+    <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+  </li>
+  {{- end -}}
+</ul>

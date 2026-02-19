@@ -1,5 +1,17 @@
 {{ define "main" }} {{ partial "back_link.html" .}}
-
 <h1>{{ .Title }}</h1>
 
-{{ .Content }} {{ partial "notes_list.html" (dict "context" .)}} {{ end }}
+{{- $indexNote := where .Pages "Params.index" true | first 1 -}} {{-
+$regularNotes := where .Pages "Params.index" "!=" true -}}
+
+<!-- <p> -->
+<!--   Debug: Total pages = {{ len .Pages }}, Index notes = {{ len $indexNote }}, -->
+<!--   Regular notes = {{ len $regularNotes }} -->
+<!-- </p> -->
+
+{{- with $indexNote -}} {{- range . -}}
+<!-- <p>Debug: Found index note titled "{{ .Title }}"</p> -->
+{{ .Content }} {{- end -}} {{- end -}} {{- if $regularNotes -}}
+<h4>Notes in this topic</h4>
+{{ partial "notes_list.html" (dict "context" . "notes" $regularNotes) }} {{- end
+-}} {{ end }}

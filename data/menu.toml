@@ -1,28 +1,8 @@
 [[entries]]
-title = "daily"
-url = "daily"
-
-[[entries]]
-title = "sketches"
-url = "sketches"
-
-[[entries]]
-title = "topics"
-url = "topics"
-
-  [[entries.entries]]
-  title = "neovim"
-  url = "neovim"
-
-  [[entries.entries]]
-  title = "sdl"
-  url = "sdl"
-
-[[entries]]
-title = "this week"
+title = "recent notes"
 
   [entries.notes_list]
-  section = "daily"
+  section = "notes"
   limit = 5
   show_more = true
   show_more_text = "More daily notes..."

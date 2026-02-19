@@ -1,11 +1,12 @@
-{{- $notes := "" -}} {{- if .section -}} {{- $notes = (where site.RegularPages
-"Section" .section) -}} {{- else -}} {{- if (eq .context.Kind "taxonomy") -}}
-{{- $notes = .context.Pages -}} {{- else -}} {{- if (eq .context.Kind "term")
--}} {{- $notes = .context.Data.Pages -}} {{- else -}} {{- $notes =
-site.RegularPages }} {{- end -}} {{- end -}} {{- end -}} {{- $limit_exceeded:=
-"" -}} {{- if (and .limit (gt (len $notes) .limit)) -}} {{- $limit_exceeded =
-true -}} {{- else -}} {{- $limit_exceeded = false -}} {{ end }} {{- if (gt (len
-$notes) 0) }} {{- if .limit }} {{ $notes = (first .limit $notes ) }} {{ end }}
+{{- $notes := "" -}} {{- if .notes -}} {{- $notes = .notes -}} {{- else if
+.section -}} {{- $notes = (where site.RegularPages "Section" .section) -}} {{-
+else -}} {{- if (eq .context.Kind "taxonomy") -}} {{- $notes = .context.Pages
+-}} {{- else -}} {{- if (eq .context.Kind "term") -}} {{- $notes =
+.context.Data.Pages -}} {{- else -}} {{- $notes = site.RegularPages }} {{- end
+-}} {{- end -}} {{- end -}} {{- $limit_exceeded := "" -}} {{- if (and .limit (gt
+(len $notes) .limit)) -}} {{- $limit_exceeded = true -}} {{- else -}} {{-
+$limit_exceeded = false -}} {{ end }} {{- if (gt (len $notes) 0) }} {{- if
+.limit }} {{ $notes = (first .limit $notes ) }} {{ end }}
 <ul>
   {{- range $note := $notes -}}
   <li>

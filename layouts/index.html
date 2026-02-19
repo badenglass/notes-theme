@@ -1,12 +1,15 @@
 {{ define "main" }}
-
 <header>
-    <h1>{{ $.Site.Title }}</h1>
-    {{- if $.Site.Params.theme_config.show_description -}}
-        <p>{{ $.Site.Params.description }}</p>
-    {{- end -}}
+  <h1>{{ $.Site.Title }}</h1>
+  {{- if $.Site.Params.theme_config.show_description -}}
+  <p>{{ $.Site.Params.description }}</p>
+  {{- end -}}
 </header>
 {{ .Content }}
-{{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
-
-{{ end }}
+<h4>reminders</h4>
+{{ partial "godspeed.html" . }}
+<h4>topics</h4>
+{{ partial "topics_list.html" (dict "context" .) }}
+<h4>notes</h4>
+{{ partial "menu_item.html" (dict "context" . "collection"
+$.Site.Data.menu.entries) }} {{ end }}
